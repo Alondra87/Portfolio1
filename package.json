@@ -1,0 +1,20 @@
+{
+  "name": "portfolio1",
+  "version": "1.0.0",
+  "description": "Setup and mobile version skeleton",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alondra87/Portfolio1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alondra87/Portfolio1/issues"
+  },
+  "homepage": "https://github.com/Alondra87/Portfolio1#readme"
+}
