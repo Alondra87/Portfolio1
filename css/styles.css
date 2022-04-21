@@ -5,6 +5,20 @@ body {
   font-family: Poppins, sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 24px;
+}
+
+li {
+  float: left;
+  text-align: left;
+}
+
 .imagen_bg {
   background-image: url("/css/header-shapes\ mobile.png");
   background-repeat: no-repeat;
@@ -46,6 +60,7 @@ body {
   align-items: center;
   color: #172b4d;
   padding-top: 100px;
+  margin: 0;
 }
 
 .description {
@@ -64,11 +79,12 @@ body {
   font-size: 16px;
   line-height: 24px;
   color: #7f8cff;
+  margin: 0;
 }
 
 .icons-media {
   display: flex;
-  padding-left: 24px;
+  justify-content: left;
 }
 
 .icon {
