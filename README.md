@@ -3,9 +3,11 @@
 # Portfolio: setup and mobile version skeleton
 
 > For this project, I used the HTML&CSS linter
-> There are 2 section:
-   -the toolbar
-   -the headline section 
+> There are the follow sections:
+   -The toolbar
+   -The headline section 
+   -Middle section
+   -About myself section
 
 ## Built With
 
