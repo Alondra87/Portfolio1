@@ -189,6 +189,14 @@ figure {
 }
 
 .project {
+  width: 295px;
+  height: 72px;
+  top: 260px;
+  padding-left: 16px;
+  border: none;
+}
+
+.button_project {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -207,12 +215,35 @@ figure {
   color: #396df2;
 }
 
-.button_project {
-  width: 295px;
-  height: 72px;
-  top: 260px;
-  padding-left: 16px;
-  border: none;
+.button_project:hover {
+  background: #6070ff;
+  box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
+  border-radius: 8px;
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #fff;
+}
+
+.button_project:active {
+  background: #2230d2;
+  border-radius: 8px;
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #fff;
 }
 
 .list_icon {
