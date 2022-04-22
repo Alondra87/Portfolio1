@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter:wght@300;400;500;600;700&family=Poppins&family=Roboto:wght@700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter:wght@300;400;500;600;700&family=Poppins&family=Roboto:wght@700&display=swap'); */
 
 body {
   font-family: Poppins, sans-serif;
@@ -17,7 +17,6 @@ ul {
 figure {
   display: flex;
   margin: 16px;
-
 }
 
 .imagen_bg {
@@ -82,7 +81,7 @@ figure {
 .presentation1 {
   font-family: Poppins, sans-serif;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 40px;
   line-height: 52px;
   display: flex;
@@ -96,7 +95,7 @@ figure {
 .presentation {
   font-family: Poppins, sans-serif;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 40px;
   line-height: 52px;
   display: flex;
@@ -139,13 +138,11 @@ figure {
 
 .icons-media {
   display: flex;
-
-  
 }
 
 .icon {
   padding-right: 20px;
-  padding-left: 0px;
+  padding-left: 0;
   float: left;
   text-align: left;
 }
@@ -210,21 +207,97 @@ figure {
   color: #396df2;
 }
 
-fieldset {
+.button_project {
   width: 295px;
   height: 72px;
-  left: 0;
   top: 260px;
-  flex: none;
-  order: 3;
-  flex-grow: 0;
   padding-left: 16px;
   border: none;
 }
-.list_icon{
+
+.list_icon {
   padding-left: 24px;
+  padding-right: 24px;
 }
 
-.list_middle{
+.list_middle {
   padding-left: 16px;
+}
+
+.presentation2 {
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 52px;
+  display: flex;
+  align-items: center;
+  color: #172b4d;
+  margin: 0;
+  padding-left: 24px;
+  padding-top: 114px;
+}
+
+.about_myself {
+  background-color: white;
+  border-top-right-radius: 80px;
+  height: 1263px;
+  margin-left: -10px;
+}
+
+.button_resume {
+  width: 295px;
+  height: 72px;
+  top: 260px;
+  padding-left: 24px;
+  border: none;
+}
+
+summary {
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #000;
+}
+
+.arrow {
+  padding-left: 150px;
+}
+
+.icon_languaje {
+  background: #f7f7f9;
+  border-radius: 8px;
+  margin: 12px 0 0 0;
+}
+
+.link_leng {
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #253858;
+}
+
+.icon_leng {
+  padding-left: 12px;
+  padding-right: 16px;
+  padding-top: 9px;
+  padding-bottom: 9.72px;
+}
+
+.list_detail {
+  margin: 36px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #dfe1e6;
+}
+
+.list_icons_lengs {
+  padding: 0;
 }
