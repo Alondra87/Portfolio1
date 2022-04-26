@@ -8,6 +8,7 @@
    -The headline section 
    -Middle section
    -About myself section
+   -Contact form section
 
 ## Built With
 
