@@ -339,6 +339,7 @@ summary {
 }
 
 .contact {
+  width: 327px;
   background-image: url(./contact_form.png);
   background-color: #6070ff;
   height: 830px;
@@ -369,6 +370,16 @@ summary {
   margin-right: 24px;
 }
 
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+form .input {
+  width: 100%;
+}
+
 .contact_text {
   text-align: center;
 }
@@ -389,11 +400,9 @@ textarea {
 
 .button_touch {
   margin-left: 24px;
-  padding: 16px;
   background: #fff;
   border: 1px solid  #6070ff;
-  box-sizing: border-box;
-  border-radius: 16px;
+  border-radius: 8px;
   font-family: Poppins, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -401,6 +410,8 @@ textarea {
   line-height: 24px;
   letter-spacing: 0.03em;
   color: #396df2;
+  width: 140px;
+  height: 48px;
 }
 
 .button_touch:hover {
