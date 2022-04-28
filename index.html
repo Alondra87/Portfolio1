@@ -11,6 +11,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+<div class="container0">
+    <div class="first_section">
         <header class="nav-menu">
             <h2 class="mylogo">
                <a href="#">My Logo</a> 
@@ -18,18 +20,22 @@
            <nav>
                <div class="menu-header">
                    <a href="#"><img id="icon-menu" src="/css/Icon-Menu.png" alt="menu"></a>
+                   <ul class="menu_desk">
+                <li><a href="#portfolio">Portfolio</a></li>  
+                   <li><a href="#about">About</a></li>
+                   <li><a href="#contact">Contact</a></li>
+                </ul>
                </div>
         </nav>
         </header>
         <main class="imagen_bg"> 
-            <h1 class="presentation1">I'm Andrea <br> Glad to see <br> you!</h1>
-        <div class="section1">
+            <div class="section0">
+            <h1 class="presentation1">I'm Andrea <br> Glad to see you!</h1>
             <p class="description1">I'm a software developer! I can help you build a product, 
             feature or website Look through some of my work and experience! 
             If you like what you see and have a project you need coded, 
             don't hestiate to contact me.</p>
-            <a href="#"><h3 class="connect">LET'S CONNECT</h3></a>
-            </div>
+            <a href="#contact"><h3 class="connect">LET'S CONNECT</h3></a>   
         <div class="icons-media">
             <ul class="list_icon">
             <li class="icon"><a href="#"><img src="/css/VectorT.png" alt="tweeter"></a></li>
@@ -38,16 +44,19 @@
             <li class="icon"><a href="#"><img src="/css/VectorG.png" alt="github"></a></li>
             <li class="icon"><a href="#"><img src="/css/VectorF.png" alt="VectorF"></a></li>
             </ul>
-        </div>
-        </main>
+        </div></div>
+        </main> 
+    </div>
 <!-- middle section-->
-<!-- work section start-->
-<section class="container">
+<section class="container" id="portfolio">
 <div class="middle-sec">
 <div class="ms1">
+<div class="mds12">  
 <figure>
-    <img src="./css/Snapshoot_Portfolio.png" alt="Snapshoot_Portfolio">
+    <img src="./css/Snapshoot_Portfolio.svg" alt="Snapshoot_Portfolio">
 </figure>
+</div>
+<div class="mds22">
 <h2 class="presentation">Tonic</h2>
    <ul class="list_middle">
         <li class="canopy">CANOPY</li>
@@ -67,13 +76,15 @@
     </ul>
     <br>
     <fieldset class="project"><button type="button" class="button_project">See Project</button></fieldset>
-</div>
+</div></div>
 </div>
 <div class="middle-sec">
-<div class="ms1">
+<div class="ms2">
+    <div class="mds12">
     <figure>
-        <img src="./css/SnapshootPortfolio2.png" alt="Snapshoot_Portfolio">
-    </figure>
+        <img src="./css/SnapshootPortfolio2.svg" alt="Snapshoot_Portfolio">
+    </figure></div>
+    <div class="mds12">
     <h2 class="presentation">Multi-Post Stories</h2>
         <ul class="list_middle">
             <li class="canopy">CANOPY</li>
@@ -93,13 +104,16 @@
         </ul>
         <br>
         <fieldset class="project"><button type="button" class="button_project">See Project</button></fieldset>
+    </div>
 </div>
 </div>
 <div class="middle-sec">
 <div class="ms1">
+    <div class="mds12">
     <figure>
-        <img src="./css/SnapshootPortfolio3.png" alt="Snapshoot_Portfolio">
-    </figure>
+        <img src="./css/SnapshootPortfolio3.svg" alt="Snapshoot_Portfolio">
+    </figure></div>
+    <div class="mds22">
     <h2 class="presentation">Tonic</h2>
         <ul class="list_middle">
             <li class="canopy">CANOPY</li>
@@ -118,13 +132,15 @@
             <li><button type="button" class="language">javascript</button></li>
         </ul>
         <br>
-        <fieldset class="project"><button type="button" class="button_project">See Project</button></fieldset>
+        <fieldset class="project"><button type="button" class="button_project">See Project</button></fieldset></div>
 </div></div>
 <div class="middle-sec">
-<div class="ms1">
+<div class="ms2">
+    <div class="mds12">
     <figure>
-        <img src="./css/SnapshootPortfolio4.png" alt="Snapshoot_Portfolio">
-    </figure>
+        <img src="./css/SnapshootPortfolio4.svg" alt="Snapshoot_Portfolio">
+    </figure></div>
+    <div class="mds12">
     <h2 class="presentation">Multi-Post Stories</h2>
         <ul class="list_middle">
             <li class="canopy">CANOPY</li>
@@ -143,14 +159,16 @@
             <li><button type="button" class="language">javascript</button></li>
         </ul>
         <br>
-        <fieldset class="project"><button type="button" class="button_project">See Project</button></fieldset>
+        <fieldset class="project"><button type="button" class="button_project">See Project</button></fieldset></div>
 </div></div>
 </section>
-<!-- work section finish-->
+<!-- middle section finish-->
 <!-- about myself start-->
-<section class="about_myself">
-    <h2 class="presentation2">About <br> myself <br></h2>
+<section class="about_myself" id="about">
 <div class="section1">
+   <div class="ams12">
+    <h2 class="presentation2">About <br> myself <br></h2>
+
  <p class="description1">Hello I'm a software developer! I can help you build a product,
       feature or website Look through some of my work and experience! 
      If you like what you see and have a project you need coded, don't hestiate to contact me.</p>
@@ -166,8 +184,8 @@
  </ul>
  <br>
 </div>
-<fieldset class="button_resume"><button type="button" class="button_project">Get my resume </button></fieldset>
-<div>
+<fieldset class="button_resume"><button type="button" class="button_project">Get my resume </button></fieldset></div>
+<div class="ams12">
     <ul class="list_icons_lengs">    
     <li class="list_detail"><details >
         <summary>Languajes<img src="/css/Union.png" class="arrow" alt=""> </summary>
@@ -189,30 +207,28 @@
 </section>
 <!-- about myself finish-->
   <!-- contact form start -->
-<section class="sec3">
+<section class="sec3" id="contact">
       <div class="contact">
           <div class="contact_text">
           <h2 class="contactme">Contact me</h2>
           <p>If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I’d love to help with it </p>
           </div>
-          <form action="https://formspree.io/f/xnqwodoq" method="POST">
+          <div class="form">
+           <form action="https://formspree.io/f/xnqwodoq" method="POST">
               <div class="input">
                 <input type="text" name="name" maxlength="30" placeholder="Yeremias" required>
               </div>
               <div class="input">
                 <input type="email" name="email" placeholder="natajayanji14@gmail.com" required>
-              </div>
-              
-              
+              </div>              
               <div class="input">
-                <textarea name="message" cols="30" rows="10" maxlength="500" placeholder="Write in your message here" required></textarea>
-              </div>
-              
-             
-              
+                <textarea name="message" cols="30" rows="10" maxlength="500" placeholder="Write your message here" required></textarea>
+              </div>           
               <button class="button_touch" type="submit">Get In Touch</button>
           </form>
+        </div>
       </div>
   </section>
+</div>
 </body>
 </html>
