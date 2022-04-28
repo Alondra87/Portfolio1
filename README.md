@@ -9,6 +9,7 @@
    -Middle section
    -About myself section
    -Contact form section
+>This project works in mobile and desktop version
 
 ## Built With
 
