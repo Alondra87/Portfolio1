@@ -1,13 +1,13 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter:wght@300;400;500;600;700&family=Poppins&family=Roboto:wght@700&display=swap'); */
-
 body {
   font-family: Poppins, sans-serif;
   background-color: #f7f7f9;
+  margin: 0;
 }
 
 .container0 {
   width: 375px;
-  margin: auto;
+  margin: 0;
   padding: 0;
 }
 
@@ -40,7 +40,6 @@ figure {
   background-image: url("/css/header-shapes_mobile.png");
   background-repeat: no-repeat;
   border-bottom-left-radius: 80px;
-  margin-left: -10px;
   height: 718px;
 }
 
@@ -89,8 +88,6 @@ figure {
   height: 104px;
   padding: 0 24px;
   background-color: white;
-  margin-left: -10px;
-  margin-top: -10px;
 }
 
 .mylogo {
@@ -332,6 +329,7 @@ summary {
   background: #f7f7f9;
   border-radius: 8px;
   margin: 12px 0 0 0;
+  display: flex;
 }
 
 .link_leng {
@@ -340,8 +338,7 @@ summary {
   font-weight: 500;
   font-size: 15px;
   line-height: 20px;
-  display: flex;
-  align-items: center;
+  align-self: center;
   color: #253858;
 }
 
@@ -359,6 +356,10 @@ summary {
 }
 
 .list_icons_lengs {
+  padding: 0;
+}
+
+.list_skill {
   padding: 0;
 }
 
@@ -480,27 +481,32 @@ textarea {
 }
 
 @media (min-width: 780px) {
-  header {
+  .nav-menu {
     position: fixed;
+    z-index: 100;
+    height: 104px;
     display: flex;
-    width: 100%;
+    width: 1393px;
   }
 
   #icon-menu {
     display: none;
   }
 
-  .menu_desk {
+  .first_section {
     display: flex;
-    margin-right: 164px;
+    width: 100%;
   }
 
-  .mylogo {
-    margin-left: 155px;
+  .menu_desk {
+    display: flex;
+    width: 100%;
   }
 
   .menu_desk li {
     padding-right: 32px;
+    float: left;
+    text-align: right;
   }
 
   .menu_desk li a {
@@ -526,9 +532,8 @@ textarea {
     background-image: url("./Headerbg2x.png");
     background-repeat: no-repeat;
     border-bottom-left-radius: 80px;
-    margin-left: -10px;
     height: 718px;
-    padding-top: 95px;
+    margin-top: 104px;
   }
 
   .section0 {
@@ -584,7 +589,7 @@ textarea {
 
   .about_myself {
     width: 1440px;
-    height: 700px;
+    height: 900px;
   }
 
   .section1 {
@@ -613,17 +618,21 @@ textarea {
 
   .sec3 {
     width: 1440px;
-    height: 924px;
+    height: 846px;
+  }
+
+  .contact_background {
+    background-color: #6070ff;
+    border-top-left-radius: 80px;
+    margin: auto;
+    padding: 80px;
   }
 
   .contact {
-    background-color: #6070ff;
-    background-size: cover;
-    border-top-left-radius: 80px;
-    margin: auto;
+    background-size: contain;
     background-image: url(/css/contact_formx2.svg);
-    width: 1440px;
-    height: 924px;
+    width: 1290.66px;
+    height: 718.7px;
     display: flex;
     flex-direction: column;
   }
@@ -650,5 +659,34 @@ textarea {
 
   .button_touch {
     align-self: center;
+  }
+
+  .list_icons_lengs {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .icon_languaje {
+    display: block;
+    display: inline-flex;
+    width: 122px;
+    height: 120px;
+    margin-left: 12px;
+  }
+
+  .icon_leng {
+    margin: 0;
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+  }
+
+  .link_leng {
+    position: absolute;
+    margin-left: 12px;
+    margin-top: 12px;
+    margin-bottom: 30px;
+    padding-top: 100px;
+    justify-content: center;
   }
 }
