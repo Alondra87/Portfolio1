@@ -1,12 +1,12 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Portfolio: setup and mobile version skeleton
-
+# Portfolio Project
+> Portfolio: application deploy
 > For this project, I used the HTML&CSS linter
 > There are the follow sections:
    -The toolbar
    -The headline section 
-   -Middle section
+   -Work section
    -About myself section
    -Contact form section
 >This project works in mobile and desktop version
@@ -15,6 +15,10 @@
 
 - HTML & CSS
 - GitHub
+- Visual Code Studio
+## Live Demo
+
+Andrea Alvarez's Portfolio: https://alondra87.github.io/Portfolio1/
 
 ## Authors
 
