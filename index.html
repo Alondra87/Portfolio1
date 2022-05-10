@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
+    <title>Portafolio's Andrea</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,17 +12,20 @@
 </head>
 <body>
        <header>
-           <a class="logo" href="#">My Logo</a> 
-            <nav>
-              <a href="#"><img id="icon-menu" src="/css/Icon-Menu.png" alt="menu"></a>
-                <ul class="menu_desk">
-                   <li><a href="#portfolio">Portfolio</a></li>  
-                   <li><a href="#about">About</a></li>
-                   <li><a href="#contact">Contact</a></li>
+           <nav class="navbar">
+             <a class="nav-branding" href="#">My Logo</a>  
+              <ul class="nav-menu">
+                   <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>  
+                   <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                   <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
-             </nav>
+         <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            </nav>
         </header>
-        
   <section class="first_section">
        <div class="imagen_bg"> 
             <div class="introduction">
@@ -52,14 +55,13 @@
     </div>
     <div class="mds22">
     <h2 class="presentation">Tonic</h2>
-       <ul class="list_middle">
+         <ul class="list_middle">
             <li class="canopy">CANOPY</li>
             <li class="counter"><img src="./css/Counter.png" alt=""></li>
             <li class="counter">Back End Dev</li>
             <li class="counter"><img src="./css/Counter.png" alt=""></li>
             <li class="counter">2015</li>
-        </ul>
-        
+        </ul>    
     <p class="description">A daily selection of privately personalized reads; no accounts or sign-ups required.</p>
         <ul class="list_middle">
             <li class="languaje">html</li> 
@@ -68,9 +70,10 @@
         </ul>
        
          <div class="project">
-             <button  type="submit" class="button_project" onclick="window.location.href='https://github.com/Alondra87/Portfolio1'">See Project</button>
+            <button  type="submit" class="button_project" onclick="window.location.href='https://github.com/Alondra87/Portfolio1'">See Project</button>
         </div>
-    </div></div>
+      </div>
+    </div>
     <div class="middle-reverse">
         <div class="mds12">  
         <figure>
@@ -85,17 +88,15 @@
                 <li class="counter">Back End Dev</li>
                 <li class="counter"><img src="/css/Counter.png" alt=""></li>
                 <li class="counter">2015</li>
-            </ul>
-            
+            </ul>    
         <p class="description">A daily selection of privately personalized reads; no accounts or sign-ups required.</p>
             <ul class="list_middle">
                 <li class="languaje">html</li> 
                 <li class="languaje">css</li>
                 <li class="languaje">javascript</li>
             </ul>
-           
              <div class="project">
-                 <button  type="submit" class="button_project" onclick="window.location.href='https://github.com/Alondra87/Portfolio1'">See Project</button>
+                <button  type="submit" class="button_project" onclick="window.location.href='https://github.com/Alondra87/Portfolio1'">See Project</button>
             </div>
     </div></div>
     <div class="middle-sec">
@@ -112,8 +113,7 @@
                 <li class="counter">Back End Dev</li>
                 <li class="counter"><img src="/css/Counter.png" alt=""></li>
                 <li class="counter">2015</li>
-            </ul>
-            
+            </ul>    
         <p class="description">A daily selection of privately personalized reads; no accounts or sign-ups required.</p>
             <ul class="list_middle">
                 <li class="languaje">html</li> 
@@ -122,7 +122,7 @@
             </ul>
            
              <div class="project">
-                 <button  type="submit" class="button_project" onclick="window.location.href='https://github.com/Alondra87/Portfolio1'">See Project</button>
+                <button  type="submit" class="button_project" onclick="window.location.href='https://github.com/Alondra87/Portfolio1'">See Project</button>
             </div>
     </div></div>
     <div class="middle-reverse">
@@ -147,12 +147,11 @@
                 <li class="languaje">css</li>
                 <li class="languaje">javascript</li>
             </ul>
-           
              <div class="project">
-                 <button  type="submit" class="button_project" onclick="window.location.href='https://github.com/Alondra87/Portfolio1'">See Project</button>
+                <button  type="submit" class="button_project" onclick="window.location.href='https://github.com/Alondra87/Portfolio1'">See Project</button>
             </div>
     </div></div>
-    </section>
+</section>
 <!-- about myself start-->
 <section class="about_myself" id="about">
 <div class="section1">
@@ -162,7 +161,6 @@
       feature or website Look through some of my work and experience! 
      If you like what you see and have a project you need coded, don't hestiate to contact me.</p>
      <a href="#contact" class="lets" ><h3 class="connect">LET'S CONNECT</h3></a>
- 
 <div class="icons-media">
  <ul class="list_icon">
     <li class="icon"><a href="#"><img src="/css/VectorG.png" alt="tweeter"></a></li>
@@ -220,5 +218,6 @@
       </div>
     </div>
   </section>
+  <script src="script.js"></script>
 </body>
 </html>
