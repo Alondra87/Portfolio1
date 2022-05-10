@@ -1,6 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Portfolio Project
+>Portfolio - mobile menu
 > Portfolio: application deploy
 > For this project, I used the HTML&CSS linter
 > There are the follow sections:
@@ -14,6 +15,7 @@
 ## Built With
 
 - HTML & CSS
+- JavaScript
 - GitHub
 - Visual Code Studio
 ## Live Demo
