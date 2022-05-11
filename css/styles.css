@@ -299,6 +299,41 @@ a {
   color: #fff;
 }
 
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 95%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 2.5rem;
+  font-weight: lighter;
+  position: absolute;
+  top: 3%;
+  right: 6%;
+  color: #67798e;
+}
+
+.button_foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .about_myself {
   background-color: white;
   border-top-right-radius: 80px;
@@ -632,7 +667,7 @@ textarea {
   }
 
   .presentation {
-    padding-top: 50px;
+    padding-top: 30px;
   }
 
   .presentation2 {
@@ -696,5 +731,85 @@ textarea {
 
   .button_touch {
     align-self: center;
+  }
+
+  .modal {
+    /* position: fixed; */
+    top: 50%;
+    left: 50%;
+
+    /* transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    z-index: 10;
+    background-color: white; */
+    border-radius: 10px;
+    border: 1px solid gray;
+    width: 70%;
+    height: 90%;
+  }
+
+
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .modal .middle-sec {
+    display: contents;
+
+    /*
+     grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+  padding-top: 16px;
+  padding-bottom: 30px; */
+  }
+
+  .modal .presentation {
+    padding-top: 0;
+  }
+
+  .modal .description {
+    margin-top: 400px;
+  }
+
+  .modal .list_middle2 {
+    position: relative;
+    left: 120%;
+    top: -90px;
+  }
+
+  .modal .mod_snaps {
+    position: absolute;
+    width: 50%;
+    top: -40px;
+    left: 25%;
+  }
+
+  .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    position: absolute;
+    top: 3%;
+    right: 6%;
+    color: #67798e;
+  }
+
+  .button_foot {
+    position: absolute;
+    right: 10%;
+    bottom: 50px;
+  }
+
+  .button_foot #modal_source {
+    margin-left: 30px;
   }
 }

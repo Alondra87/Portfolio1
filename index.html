@@ -62,25 +62,25 @@
             <li class="counter"><img src="./css/Counter.png" alt=""></li>
             <li class="counter">2015</li>
         </ul>    
-    <p class="description">A daily selection of privately personalized reads; no accounts or sign-ups required.</p>
+     <p class="description">A daily selection of privately personalized reads; no accounts or sign-ups required.</p>
         <ul class="list_middle">
             <li class="languaje">html</li> 
             <li class="languaje">css</li>
             <li class="languaje">javascript</li>
         </ul>
-       
+
          <div class="project">
-            <button  type="submit" class="button_project" onclick="window.location.href='https://github.com/Alondra87/Portfolio1'">See Project</button>
+            <button  class="button_project" onClick="openModal(0)" >See Project</button> <!--  data-modal-target="#modal" -->
         </div>
       </div>
     </div>
-    <div class="middle-reverse">
+    <div class="middle-reverse" id="modal2">
         <div class="mds12">  
         <figure>
             <img class="snaps" src="./css/SnapshootPortfolio2.svg" alt="Snapshoot_Portfolio">
         </figure>
         </div>
-        <div class="mds22">
+    <div class="mds22">
         <h2 class="presentation">Multi-Post Stories</h2>
            <ul class="list_middle">
                 <li class="canopy">CANOPY</li>
@@ -96,7 +96,7 @@
                 <li class="languaje">javascript</li>
             </ul>
              <div class="project">
-                <button  type="submit" class="button_project" onclick="window.location.href='https://github.com/Alondra87/Portfolio1'">See Project</button>
+                <button  class="button_project" onClick="openModal(1)">See Project</button>
             </div>
     </div></div>
     <div class="middle-sec">
@@ -122,7 +122,7 @@
             </ul>
            
              <div class="project">
-                <button  type="submit" class="button_project" onclick="window.location.href='https://github.com/Alondra87/Portfolio1'">See Project</button>
+                <button  class="button_project" onClick="openModal(2)" >See Project</button>
             </div>
     </div></div>
     <div class="middle-reverse">
@@ -148,10 +148,38 @@
                 <li class="languaje">javascript</li>
             </ul>
              <div class="project">
-                <button  type="submit" class="button_project" onclick="window.location.href='https://github.com/Alondra87/Portfolio1'">See Project</button>
+                <button  class="button_project" onClick="openModal(3)">See Project</button>
             </div>
     </div></div>
 </section>
+ <!--section modal-->
+ <div class="modal" id="modal">
+    <div class="middle-sec">
+       <div class="mds22">
+            <h2 id="modal_title" class="presentation">Tonic</h2>
+            <button data-close-button class="close-button">&times;</button>
+            <ul class="list_middle" id="modal_middle">
+               <li class="canopy">CANOPY</li>
+               <li class="counter"><img src="./css/Counter.png" alt=""></li>
+               <li class="counter">Back End Dev</li>
+               <li class="counter"><img src="./css/Counter.png" alt=""></li>
+               <li class="counter">2015</li>
+           </ul>
+           <br>
+        <div class="mds12">  
+       <figure>
+           <img id="modal_snap" class="mod_snaps" src="./css/Snapshoot_Portfolio.svg" alt="Snapshoot_Portfolio">
+       </figure>
+       </div>   
+       <p class="description" id="modal_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, mollitia molestiae quos enim error ducimus, voluptatibus quidem optio maiores iste nulla totam iure voluptatum necessitatibus repellendus vero eos sunt aut.</p>
+           <ul id="modal_lang" class="list_middle2"></ul>
+         <div class="button_foot">
+              <a id="modal_live" class="button_project" href="https://github.com/Alondra87/Portfolio1" target="_blank">See Live <img src="./css/circlearrow.png" alt=""></a>
+               <a  id="modal_source" class="button_project" href="#" target="_blank">See Source <img src="./css/kitty.png" alt=""></a>
+ </div>
+ <div id="overlay"></div>
+ </div> </div></div>
+<!--section modal end-->
 <!-- about myself start-->
 <section class="about_myself" id="about">
 <div class="section1">
