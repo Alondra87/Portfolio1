@@ -1,3 +1,15 @@
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('active');
+});
+
+document.querySelectorAll('.nav-link').forEach((n) => n.addEventListener('click', () => {
+  hamburger.classList.remove('active');
+  navMenu.classList.remove('active');
+}));
+
 const sections = [{
   presentation: 'Tonic',
   list_middle: ['CANOPY', 'Back End Dev', 2015],
@@ -36,22 +48,53 @@ const sections = [{
 },
 ];
 
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+// let workSections = document.querySelector('.container')
+const loadSections = () => {
+  let showProjects = '';
 
+  for (let i = 0; i < sections.length; i += 1) {
+    let techlang = '';
+    let listmidd = '';
+
+    for (let j = 0; j < sections[i].list_middle.length; j += 1) {
+      listmidd += (j === 0) ? `<li class="canopy">${sections[i].list_middle[j]}</li>` : `<li class="counter">${sections[i].list_middle[j]}</li>`;
+      if (j !== sections.list_middle.length - 1) listmidd += '<li class="counter"><img src="./css/Counter.png" alt=""></li>';
+    }
+
+    for (let k = 0; k < sections[i].languaje.length; k += 1) {
+      techlang += `<li class="languaje">${sections[i].languaje[k]}</li>`;
+    }
+
+    showProjects += `<div class="middle-sec">
+  
+  <div class="mds12">  
+  <figure>
+      <img class="snaps" src="${sections[i].snaps}" alt="Snapshoot_Portfolio">
+  </figure>
+  </div>
+  <div class="mds22">
+  <h2 class="presentation">${sections[i].presentation}</h2>
+       <ul class="list_middle">
+       ${listmidd}
+      </ul>    
+   <p class="description">${sections[i].text}</p>
+      <ul class="list_middle">
+      ${techlang}
+      </ul>
+       <div class="project">
+          <button  class="button_project" type="button">See Project</button>
+      </div>
+    </div>
+  </div> `;
+    document.getElementById('portfolio').innerHTML = showProjects;
+  }
+};
+
+loadSections();
+/*
 // const openModalButtons = document.querySelectorAll('[data-modal-target]');
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
 const overlay = document.getElementById('overlay');
-
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navMenu.classList.toggle('active');
-});
-
-document.querySelectorAll('.nav-link').forEach((n) => n.addEventListener('click', () => {
-  hamburger.classList.remove('active');
-  navMenu.classList.remove('active');
-}));
 
 // openModalButtons.forEach((button) => {
 // button.addEventListener('click', (event) => {
@@ -77,12 +120,22 @@ overlay.addEventListener('click', () => {
 const openModal = (id = null) => {
   if (id !== null) {
     let techlang = '';
+    let listmidd = '';
+
+  for (let i = 0; i < sections[id].list_middle.length; i += 1) {
+  listmidd += (i === 0) ? `<li class="canopy">${sections[id].list_middle[i]}</li>` :
+  `<li class="counter">${sections[id].list_middle[i]}</li>`;
+  if (i !== sections[id].list_middle.length - 1) listmidd +=
+  '<li class="counter"><img src="./css/Counter.png" alt=""></li>';
+    }
 
     sections[id].languaje.forEach((elem) => {
       techlang += `<li class="languaje">${elem}</li>`;
+
     });
 
     document.getElementById('modal_title').innerHTML = sections[id].presentation;
+    document.getElementById('modal_middle').innerHTML = listmidd;
     document.getElementById('modal_snap').src = `./css/${sections[id].snaps}`;
     document.getElementById('modal_lang').innerHTML = techlang;
     document.getElementById('modal_text').innerHTML = sections[id].text;
@@ -92,7 +145,7 @@ const openModal = (id = null) => {
     const modal = document.querySelector('#modal');
     modal.classList.add('active');
   }
-};
+}; */
 
 /* function openModal(modal) {
   if (modal == null) return
@@ -100,11 +153,11 @@ const openModal = (id = null) => {
   overlay.classList.add('active')
 } */
 
-closeModalButtons.forEach((button) => {
+/* closeModalButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const modal = button.closest('.modal');
     closeModal(modal);
   });
 });
 
-openModal();
+openModal(); */
