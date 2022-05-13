@@ -549,6 +549,15 @@ textarea {
   color: #fff;
 }
 
+.error-warning {
+  display: none;
+}
+
+.error-warning.active {
+  display: contents;
+  padding-left: 30px;
+}
+
 @media (max-width: 768px) {
   .hamburger {
     cursor: pointer;
