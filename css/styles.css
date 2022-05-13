@@ -155,20 +155,6 @@ a {
   padding-bottom: 30px;
 }
 
-/*
-.middle-reverse {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  background: #fff;
-  border: 1px solid #dfe1e6;
-  border-radius: 16px;
-  padding-top: 16px;
-  padding-bottom: 30px;
-} */
-
 .mds12 {
   display: flex;
   justify-content: flex-start;
@@ -547,6 +533,15 @@ textarea {
   line-height: 24px;
   letter-spacing: 0.03em;
   color: #fff;
+}
+
+.error-warning {
+  display: none;
+}
+
+.error-warning.active {
+  display: contents;
+  padding-left: 30px;
 }
 
 @media (max-width: 768px) {
