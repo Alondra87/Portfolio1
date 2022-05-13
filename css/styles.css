@@ -84,7 +84,7 @@ a {
   align-items: flex-start;
   padding-left: 24px;
   padding-right: 24px;
-  padding-top: 156px;
+  padding-top: 80px;
   padding-bottom: 138px;
 }
 
@@ -155,6 +155,7 @@ a {
   padding-bottom: 30px;
 }
 
+/*
 .middle-reverse {
   grid-column-start: 2;
   grid-column-end: 3;
@@ -166,7 +167,7 @@ a {
   border-radius: 16px;
   padding-top: 16px;
   padding-bottom: 30px;
-}
+} */
 
 .mds12 {
   display: flex;
@@ -192,7 +193,7 @@ a {
   font-family: Poppins, sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 300%;
   line-height: 52px;
   display: flex;
   align-items: center;
@@ -205,7 +206,7 @@ a {
 }
 
 .canopy {
-  padding-right: 10px;
+  padding-right: 20px;
   float: left;
   font-family: Poppins, sans-serif;
   font-style: normal;
@@ -217,7 +218,7 @@ a {
 }
 
 .counter {
-  padding-right: 10px;
+  padding-right: 25px;
   float: left;
   text-align: left;
   font-family: Poppins, sans-serif;
@@ -226,7 +227,7 @@ a {
   font-size: 13px;
   line-height: 16px;
   color: #7a869a;
-  list-style: none;
+  list-style: disc;
 }
 
 .description {
@@ -297,6 +298,63 @@ a {
   line-height: 24px;
   letter-spacing: 0.03em;
   color: #fff;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 95%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal_buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #c1c7d0;
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 2.5rem;
+  font-weight: lighter;
+  position: absolute;
+  top: 3%;
+  right: 6%;
+  color: #67798e;
+}
+
+.button_foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .about_myself {
@@ -572,42 +630,22 @@ textarea {
 
   .middle-sec {
     flex-direction: row;
-    margin-left: 142px;
-    margin-right: 142px;
+    margin-left: 9%;
+    margin-right: 90px;
     height: 448px;
   }
 
   .middle-sec .mds12 {
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
     padding: 0;
     width: 50%;
   }
 
   .middle-sec .mds22 {
     width: 50%;
-    margin-left: 24px;
-    margin-right: 24px;
-  }
-
-  .middle-reverse {
-    flex-direction: row-reverse;
-    margin-left: 142px;
-    margin-right: 142px;
-    height: 448px;
-  }
-
-  .middle-reverse .mds12 {
-    margin-left: 24px;
-    margin-right: 24px;
-    width: 50%;
-    padding: 0;
-  }
-
-  .middle-reverse .mds22 {
-    width: 50%;
-    margin-left: 24px;
-    margin-right: 46px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .snaps {
@@ -632,7 +670,8 @@ textarea {
   }
 
   .presentation {
-    padding-top: 50px;
+    padding-top: 0;
+    margin-top: 10px;
   }
 
   .presentation2 {
@@ -640,7 +679,7 @@ textarea {
   }
 
   .arrow {
-    padding-left: 75%;
+    padding-left: 68%;
   }
 
   .list_icons_lengs {
@@ -696,5 +735,53 @@ textarea {
 
   .button_touch {
     align-self: center;
+  }
+
+  .modal {
+    top: 50%;
+    left: 50%;
+    overflow: auto;
+    width: 90%;
+    height: 95%;
+  }
+
+  .modal .middle-sec {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  .modal .middle-sec .mds22 {
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal .middle-sec .mds12 {
+    flex-direction: column;
+    width: 90%;
+    max-height: 700px;
+  }
+
+  .modal .middle-sec .description {
+    width: 60%;
+    margin-right: 20px;
+  }
+
+  .modal .mds12 .snaps {
+    width: 100%;
+    height: 80%;
+  }
+
+  .modal_content {
+    display: flex;
+    padding: 20px;
+    margin-top: 18%;
+  }
+
+  .modal .button_project {
+    margin: 20px;
+    height: 50px;
+    width: 160px;
   }
 }
