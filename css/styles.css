@@ -84,7 +84,7 @@ a {
   align-items: flex-start;
   padding-left: 24px;
   padding-right: 24px;
-  padding-top: 156px;
+  padding-top: 80px;
   padding-bottom: 138px;
 }
 
@@ -155,6 +155,7 @@ a {
   padding-bottom: 30px;
 }
 
+/*
 .middle-reverse {
   grid-column-start: 2;
   grid-column-end: 3;
@@ -166,7 +167,7 @@ a {
   border-radius: 16px;
   padding-top: 16px;
   padding-bottom: 30px;
-}
+} */
 
 .mds12 {
   display: flex;
@@ -192,7 +193,7 @@ a {
   font-family: Poppins, sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 300%;
   line-height: 52px;
   display: flex;
   align-items: center;
@@ -205,7 +206,7 @@ a {
 }
 
 .canopy {
-  padding-right: 10px;
+  padding-right: 20px;
   float: left;
   font-family: Poppins, sans-serif;
   font-style: normal;
@@ -217,7 +218,7 @@ a {
 }
 
 .counter {
-  padding-right: 10px;
+  padding-right: 25px;
   float: left;
   text-align: left;
   font-family: Poppins, sans-serif;
@@ -226,7 +227,7 @@ a {
   font-size: 13px;
   line-height: 16px;
   color: #7a869a;
-  list-style: none;
+  list-style: disc;
 }
 
 .description {
@@ -313,6 +314,23 @@ a {
 
 .modal.active {
   transform: translate(-50%, -50%) scale(1);
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .close-button {
@@ -607,35 +625,35 @@ textarea {
 
   .middle-sec {
     flex-direction: row;
-    margin-left: 142px;
-    margin-right: 142px;
+    margin-left: 9%;
+    margin-right: 90px;
     height: 448px;
   }
 
   .middle-sec .mds12 {
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
     padding: 0;
     width: 50%;
   }
 
   .middle-sec .mds22 {
     width: 50%;
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
-  .middle-reverse {
+  /* .middle-reverse {
     flex-direction: row-reverse;
-    margin-left: 142px;
-    margin-right: 142px;
+    margin-left: 10%;
+    margin-right: 90px;
     height: 448px;
   }
 
   .middle-reverse .mds12 {
     margin-left: 24px;
     margin-right: 24px;
-    width: 50%;
+    width: 80%;
     padding: 0;
   }
 
@@ -643,7 +661,7 @@ textarea {
     width: 50%;
     margin-left: 24px;
     margin-right: 46px;
-  }
+  } */
 
   .snaps {
     width: 100%;
@@ -667,7 +685,8 @@ textarea {
   }
 
   .presentation {
-    padding-top: 30px;
+    padding-top: 0;
+    margin-top: 10px;
   }
 
   .presentation2 {
@@ -675,7 +694,7 @@ textarea {
   }
 
   .arrow {
-    padding-left: 75%;
+    padding-left: 68%;
   }
 
   .list_icons_lengs {
@@ -737,25 +756,31 @@ textarea {
     /* position: fixed; */
     top: 50%;
     left: 50%;
+    overflow: auto;
 
-    /* transform: translate(-50%, -50%) scale(0);
+    /*
+    transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
     z-index: 10;
     background-color: white; */
     border-radius: 10px;
     border: 1px solid gray;
-    width: 70%;
-    height: 90%;
-  }
-
-  .modal.active {
-    transform: translate(-50%, -50%) scale(1);
+    width: 90%;
+    height: 95%;
   }
 
   .modal .middle-sec {
     display: contents;
+  }
 
-    /*
+  .modal .snaps {
+    position: absolute;
+    width: 70%;
+    left: 10%;
+    top: 10%;
+  }
+
+  /*
      grid-column-start: 2;
   grid-column-end: 3;
   display: flex;
@@ -765,28 +790,29 @@ textarea {
   border: 1px solid #dfe1e6;
   border-radius: 16px;
   padding-top: 16px;
-  padding-bottom: 30px; */
+  padding-bottom: 30px;
   }
 
+.modal_botton{
+
+} */
+
+  /* .list_middle2{
+  position: absolute;
+  left: 70%;
+  top: 118%;
+  }
   .modal .presentation {
     padding-top: 0;
   }
 
+  .modal .mds12{
+   padding: 55%;
+  }
+
   .modal .description {
-    margin-top: 400px;
-  }
 
-  .modal .list_middle2 {
-    position: relative;
-    left: 120%;
-    top: -90px;
-  }
-
-  .modal .mod_snaps {
-    position: absolute;
-    width: 50%;
-    top: -40px;
-    left: 25%;
+    padding-bottom: 50px;
   }
 
   .close-button {
@@ -810,5 +836,5 @@ textarea {
 
   .button_foot #modal_source {
     margin-left: 30px;
-  }
+  } */
 }

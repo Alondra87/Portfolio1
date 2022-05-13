@@ -11,19 +11,21 @@ document.querySelectorAll('.nav-link').forEach((n) => n.addEventListener('click'
 }));
 
 const sections = [{
-  presentation: 'Tonic',
+  presentation: 'Facebook 360',
   list_middle: ['CANOPY', 'Back End Dev', 2015],
-  snaps: 'Snapshoot_Portfolio.svg',
-  text: 'Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Nihil molestiae consequatur, vel illum qui dolorem eum.',
+  snaps: './css/Snapshoot_Portfolio.svg',
+  text: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+  description: 'Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Nihil molestiae consequatur, vel illum qui dolorem eum.',
   languaje: ['html', 'css', 'javascript', 'Bootstrap'],
   live: 'https://github.com/Alondra87/Portfolio1',
   source: 'https://dribbble.com/shots/16091521-Language-Course-Landing-Page-Template',
 },
 {
-  presentation: 'Multi-Post Stories',
+  presentation: 'Uber Navigation',
   list_middle: ['CANOPY', 'Back End Dev', 2015],
-  snaps: 'SnapshootPortfolio2.svg',
-  text: 'Qui officia deserunt mollit anim id est laborum. Non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Fugiat quo voluptas nulla pariatur? Non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
+  snaps: './css/SnapshootPortfolio2.svg',
+  text: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+  description: 'Qui officia deserunt mollit anim id est laborum. Non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Fugiat quo voluptas nulla pariatur? Non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
   languaje: ['html', 'css', 'javascript', 'Ruby'],
   live: 'https://github.com/Alondra87/Portfolio1',
   source: 'https://dribbble.com/shots/13488883-Teacher-Availability-Calendar',
@@ -31,8 +33,9 @@ const sections = [{
 {
   presentation: 'Multi-Post Stories',
   list_middle: ['CANOPY', 'Back End Dev', 2015],
-  snaps: 'SnapshootPortfolio3.svg',
-  text: 'Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam. Corrupti quos dolores et quas molestias excepturi sint occaecati. Laboris nisi ut aliquip ex ea commodo consequat.',
+  snaps: './css/SnapshootPortfolio3.svg',
+  text: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+  description: 'Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam. Corrupti quos dolores et quas molestias excepturi sint occaecati. Laboris nisi ut aliquip ex ea commodo consequat.',
   languaje: ['html', 'css', 'javascript', 'Python'],
   live: 'https://github.com/Alondra87/Portfolio1',
   source: 'https://www.behance.net/gallery/100768775/Online-Yoga-Fitness-Website',
@@ -40,32 +43,36 @@ const sections = [{
 {
   presentation: 'Tonic',
   list_middle: ['CANOPY', 'Back End Dev', 2015],
-  snaps: 'SnapshootPortfolio4.svg',
-  text: 'Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat. Fugiat quo voluptas nulla pariatur? Corrupti quos dolores et quas molestias excepturi sint occaecati.',
+  snaps: './css/SnapshootPortfolio4.svg',
+  text: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+  description: 'Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat. Fugiat quo voluptas nulla pariatur? Corrupti quos dolores et quas molestias excepturi sint occaecati.',
   languaje: ['html', 'css', 'javascript', 'PHP'],
   live: 'https://github.com/Alondra87/Portfolio1',
   source: 'https://dribbble.com/shots/13476985-Landing-page-Kitchen',
 },
 ];
 
-// let workSections = document.querySelector('.container')
 const loadSections = () => {
-  let showProjects = '';
+  let showSections = '';
 
   for (let i = 0; i < sections.length; i += 1) {
     let techlang = '';
     let listmidd = '';
+    let rond = '';
 
     for (let j = 0; j < sections[i].list_middle.length; j += 1) {
-      listmidd += (j === 0) ? `<li class="canopy">${sections[i].list_middle[j]}</li>` : `<li class="counter">${sections[i].list_middle[j]}</li>`;
-      if (j !== sections.list_middle.length - 1) listmidd += '<li class="counter"><img src="./css/Counter.png" alt=""></li>';
+      if (j !== 0) { rond = 'counter'; } else {
+        rond = 'canopy';
+      }
+
+      listmidd += `<li class=${rond}>${sections[i].list_middle[j]}</li>`;
     }
 
     for (let k = 0; k < sections[i].languaje.length; k += 1) {
       techlang += `<li class="languaje">${sections[i].languaje[k]}</li>`;
     }
 
-    showProjects += `<div class="middle-sec">
+    showSections += `<div class="middle-sec">
   
   <div class="mds12">  
   <figure>
@@ -82,33 +89,64 @@ const loadSections = () => {
       ${techlang}
       </ul>
        <div class="project">
-          <button  class="button_project" type="button">See Project</button>
+          <button  class="button_project" data-modal-target="#modal" type="button">See Project</button> 
       </div>
     </div>
   </div> `;
-    document.getElementById('portfolio').innerHTML = showProjects;
+    document.getElementById('portfolio').innerHTML = showSections;
+
+    let showModal = '';
+    showModal += `<div class="middle-sec">
+  <div class="mds22">
+       <h2 class="presentation">${sections[i].presentation}</h2>
+       <button data-close-button class="close-button" type="button">&times;</button>
+       <ul class="list_middle" id="modal_middle">
+       ${listmidd}
+      </ul>
+      <br>
+   <div class="mds12">  
+  <figure>
+      <img class="snaps" src="${sections[i].snaps}" alt="Snapshoot_Portfolio">
+  </figure>
+  </div>   
+  <p class="description" id="modal_text">${sections[i].description}</p>  
+  <ul id="modal_lang" class="list_middle2">
+      ${techlang}
+      </ul>
+    <div class="button_foot">
+         <a id="modal_live" class="button_project" href="${sections[i].live}" target="_blank" rel="noreferrer noopener" aria-label="this is an external link (opens in a new tab)">See Live <img src="./css/circlearrow.png" alt=""></a>
+          <a  id="modal_source" class="button_project" href="${sections[i].source}" target="_blank" rel="noreferrer noopener" aria-label="this is an external link (opens in a new tab)">See Source <img src="./css/kitty.png" alt=""></a>
+          </div>
+</div> </div>`;
+
+    document.getElementById('modal').innerHTML = showModal;
   }
 };
 
 loadSections();
-/*
-// const openModalButtons = document.querySelectorAll('[data-modal-target]');
+
+const openModalButtons = document.querySelectorAll('[data-modal-target]');
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
 const overlay = document.getElementById('overlay');
 
-// openModalButtons.forEach((button) => {
-// button.addEventListener('click', (event) => {
-// const id = event.target.id;
-// const modal = document.querySelector(button.dataset.modalTarget);
-// openModal(modal);
-// });
-// });
+function openModal(modal) {
+  if (modal == null) return;
+  modal.classList.add('active');
+  overlay.classList.add('active');
+}
 
 function closeModal(modal) {
   if (modal == null) return;
   modal.classList.remove('active');
   overlay.classList.remove('active');
 }
+
+openModalButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget);
+    openModal(modal);
+  });
+});
 
 overlay.addEventListener('click', () => {
   const modals = document.querySelectorAll('.modal.active');
@@ -117,47 +155,9 @@ overlay.addEventListener('click', () => {
   });
 });
 
-const openModal = (id = null) => {
-  if (id !== null) {
-    let techlang = '';
-    let listmidd = '';
-
-  for (let i = 0; i < sections[id].list_middle.length; i += 1) {
-  listmidd += (i === 0) ? `<li class="canopy">${sections[id].list_middle[i]}</li>` :
-  `<li class="counter">${sections[id].list_middle[i]}</li>`;
-  if (i !== sections[id].list_middle.length - 1) listmidd +=
-  '<li class="counter"><img src="./css/Counter.png" alt=""></li>';
-    }
-
-    sections[id].languaje.forEach((elem) => {
-      techlang += `<li class="languaje">${elem}</li>`;
-
-    });
-
-    document.getElementById('modal_title').innerHTML = sections[id].presentation;
-    document.getElementById('modal_middle').innerHTML = listmidd;
-    document.getElementById('modal_snap').src = `./css/${sections[id].snaps}`;
-    document.getElementById('modal_lang').innerHTML = techlang;
-    document.getElementById('modal_text').innerHTML = sections[id].text;
-    document.getElementById('modal_live').href = sections[id].live;
-    document.getElementById('modal_source').href = sections[id].source;
-
-    const modal = document.querySelector('#modal');
-    modal.classList.add('active');
-  }
-}; */
-
-/* function openModal(modal) {
-  if (modal == null) return
-  modal.classList.add('active')
-  overlay.classList.add('active')
-} */
-
-/* closeModalButtons.forEach((button) => {
+closeModalButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const modal = button.closest('.modal');
     closeModal(modal);
   });
 });
-
-openModal(); */
