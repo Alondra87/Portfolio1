@@ -1,0 +1,126 @@
+
+const loadSections = () => {
+  let showSections = '';
+
+  for (let i = 0; i < sections.length; i += 1) {
+    let techlang = '';
+    let listmidd = '';
+    let rond = '';
+
+    for (let j = 0; j < sections[i].list_middle.length; j += 1) {
+      if (j !== 0) { rond = 'counter'; } else {
+        rond = 'canopy';
+      }
+
+      listmidd += `<li class=${rond}>${sections[i].list_middle[j]}</li>`;
+    }
+
+    for (let k = 0; k < sections[i].languaje.length; k += 1) {
+      techlang += `<li class="languaje">${sections[i].languaje[k]}</li>`;
+    }
+
+    showSections += `<div class="middle-sec">
+  
+  <div class="mds12">  
+  <figure>
+      <img class="snaps" src="${sections[i].snaps}" alt="Snapshoot_Portfolio">
+  </figure>
+  </div>
+  <div class="mds22">
+  <h2 class="presentation">${sections[i].presentation}</h2>
+       <ul class="list_middle">
+       ${listmidd}
+      </ul>    
+   <p class="description">${sections[i].text}</p>
+      <ul class="list_middle">
+      ${techlang}
+      </ul>
+       <div class="project">
+          <button  class="button_project" onClick="openModal(${[i]})" type="button">See Project</button> 
+      </div>
+    </div>
+  </div> `;
+   
+  document.getElementById('portfolio').innerHTML = showSections;
+    
+  }
+};
+
+loadSections();
+
+const openModal = (id = null) => {
+  if (id !== null) {
+    let showModal = '';
+
+    for (let i = 0; i < sections.length; i += 1) {
+      let techlang = '';
+      let listmidd = '';
+      let rond = '';
+
+      for (let j = 0; j < sections[i].list_middle.length; j += 1) {
+        if (j !== 0) { rond = 'counter'; } else {
+          rond = 'canopy';
+        }
+
+        listmidd += `<li class=${rond}>${sections[i].list_middle[j]}</li>`;
+      }
+
+      for (let k = 0; k < sections[i].languaje.length; k += 1) {
+        techlang += `<li class="languaje">${sections[i].languaje[k]}</li>`;
+      }
+
+      showModal += `<div class="middle-sec">
+  <div class="mds22">
+       <h2 class="presentation">${sections[i].presentation}</h2>
+       <button data-close-button class="close-button" type="button">&times;</button>
+       <ul class="list_middle" id="modal_middle">
+       ${listmidd}
+      </ul>
+      <br>
+   <div class="mds12">  
+  <figure>
+      <img class="snaps" src="${sections[i].snaps}" alt="Snapshoot_Portfolio">
+  </figure>
+  </div>   
+  <p class="description" id="modal_text">${sections[i].description}</p>  
+  <ul id="modal_lang" class="list_middle2">
+      ${techlang}
+      </ul>
+    <div class="button_foot">
+         <a id="modal_live" class="button_project" href="${sections[i].live}" target="_blank" rel="noreferrer noopener" aria-label="this is an external link (opens in a new tab)">See Live <img src="./css/circlearrow.png" alt=""></a>
+          <a  id="modal_source" class="button_project" href="${sections[i].source}" target="_blank" rel="noreferrer noopener" aria-label="this is an external link (opens in a new tab)">See Source <img src="./css/kitty.png" alt=""></a>
+          </div>
+</div> </div>`;
+
+     // document.getElementById('modal').innerHTML = showModal;
+
+      const modal = document.querySelector('#modal');
+      modal.classList.add('active');
+    }
+  }
+};
+
+const closeModalButtons = document.querySelectorAll('[data-close-button]');
+const overlay = document.getElementById('overlay');
+
+function closeModal(modal) {
+  if (modal == null) return;
+  modal.classList.remove('active');
+  overlay.classList.remove('active');
+}
+
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active');
+  modals.forEach((modal) => {
+    closeModal(modal);
+  });
+});
+
+closeModalButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal');
+    closeModal(modal);
+  });
+});
+
+openModal();
